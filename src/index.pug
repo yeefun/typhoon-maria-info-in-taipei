@@ -1,0 +1,81 @@
+doctype html
+html(lang='zh-Hant-TW')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title 瑪莉亞颱風防災資訊平台
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css')
+    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.1.0/css/solid.css', integrity='sha384-TbilV5Lbhlwdyc4RuIV/JhD8NR+BfMrvz4BL5QFa2we1hQu6wvREr3v6XSRfCTRp', crossorigin='anonymous')
+    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.1.0/css/fontawesome.css', integrity='sha384-ozJwkrqb90Oa3ZNb+yKFW2lToAWYdTiF1vt8JiH5ptTGHTGcN7qdoR1F95e0kYyG', crossorigin='anonymous')
+    link(rel='stylesheet', href='css/style.css')
+  body
+    //
+      設計稿：https://xd.adobe.com/spec/44284b2a-7c4e-4828-61a6-0144c2323269-3219/screen/972101cb-c729-4bfe-808a-3c03c4be6a70/Web-1920-1/
+      說明：
+      - https://www.facebook.com/groups/173311386703334/permalink/201194263915046/
+      - https://quip.com/Z8YaACGs9Ist
+      介接 API：
+      - https://taipeicity.github.io/eoc_119/
+      - https://next.json-generator.com/api/json/get/Ek86hdRMr
+    //
+      尚未完成：
+      -
+    nav
+      div
+        h1
+          | 臺北
+          span 市
+        h1 瑪莉亞颱風災害動態資訊
+    main
+      div
+        .info
+          p 防災災情及相關諮詢電話：87863119
+          p 分機：8900-8907
+        .search-bar
+          section
+            .title 受災地區：
+            .select
+              .select__display.dist 所有受災地區
+              ul.select__option.dist.hide
+                li 所有受災地區
+          section
+            .title 災害類型：
+            .select
+              .select__display.type.placeholder - 請選擇災害類型 -
+              ul.select__option.type.hide
+                li 所有災害類型
+          section
+            .title 是否處理完成：
+            .select
+              .select__display.complete.placeholder - 請選擇是否完成 -
+              ul.select__option.complete.hide
+                li 不選擇
+                li 已經處理完成
+                li 尚未處理完成
+        .search-info
+          .search-info__summary
+            | 共有&nbsp;
+            span
+            | &nbsp;筆資料
+          .search-info__display
+            span 一次顯示&nbsp;
+            span.num.active 20
+            span /
+            span.num 40
+            span /
+            span.num 80
+            span &nbsp;筆
+        .search-result
+        .pagination
+          button.prev.disabled
+            i.fas.fa-angle-double-left
+          button.next
+            i.fas.fa-angle-double-right
+    footer
+      p
+        | 臺北市&nbsp;
+        span 瑪莉亞颱風災害動態資訊
+      p 資料來源：臺北市政府&nbsp;消防局EOC&nbsp;開放資料專區
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='js/index.js')
